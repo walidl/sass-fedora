@@ -1,0 +1,167 @@
+section.hero{
+  height: 100vh;
+  padding-top: $navfullheight;
+  position: relative;
+
+  .slider{
+
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .slide1{
+
+      animation: moveA;
+      z-index: 2;
+
+      background-image: url("http://192.168.1.250/foodora/img/slide1.jpg");
+    }
+
+    .slide2{
+
+      animation: moveB;
+      z-index: 2;
+      left:-100%;
+      background-image: url("http://192.168.1.250/foodora/img/slide2.jpg");
+    }
+
+    .slide1, .slide2{
+      
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+
+      animation-duration: 15s;
+      animation-timing-function:ease-in-out;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+
+      h1{
+
+        width: 60%;
+        font-size: 42px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-weight: 500;
+        transform: translate(-50%,-50%);
+        text-shadow: 0 2px 0 rgba(0,0,0,0.12);
+      }
+    }
+}
+
+.countries{
+
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 3;
+
+  .container{
+
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+
+    h3{
+
+      color: white;
+      font-size: 12px;
+      margin-right: 40px;
+      white-space: nowrap;
+    }
+  }
+
+  .flags{
+
+    display: flex;
+    flex-wrap: wrap;
+
+    div{
+
+      margin-right: 15px;
+      margin-bottom: 15px;
+      position: relative;
+      height: 30px;
+      cursor: pointer;
+
+      img{
+
+        height: 30px;
+        border-radius: 3px;
+      }
+
+      .name {
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 22px;
+        font-size: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+        padding: 3px 8px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+        }
+
+      }
+
+      &:hover{
+
+        .name{
+
+          display: flex;
+        }
+      }
+
+    }
+  }
+}
+
+}
+
+@keyframes moveA {
+  0%  {left:0;}
+  45% {left:0;}
+  50% {left:-100%}
+  60% {z-index: 0;left:-100%}
+  70% {left:100%}
+  80% {z-index: 2}
+  95% { left:100%}
+  100%{left:0;}
+
+}
+
+@keyframes moveB {
+
+  0%  {left:-100%}
+  10% {z-index: 0;left:-100%}
+  20%{left:100%}
+  30%{z-index: 2}
+  20% {left:100%}
+  45% {left:100%;}
+  50% {left:0}
+  95% {left:0}
+  100%{left:-100%;}
+
+}

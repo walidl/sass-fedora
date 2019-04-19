@@ -1,0 +1,45 @@
+nav{
+
+  position: fixed;
+  top:0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 5;
+
+  .container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $navfullheight;
+
+    img{
+
+      height: $logoheight;
+    }
+
+    ul{
+
+      display: flex;
+      align-items: center;
+      color: $maincolor;
+
+      li{
+
+        margin-left: 25px;
+
+        a{
+          font-size: 15px;
+
+          letter-spacing: 1px;
+
+          white-space: nowrap;
+
+          .fas{
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}

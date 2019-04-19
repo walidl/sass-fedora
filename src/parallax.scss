@@ -1,0 +1,46 @@
+section.parallax{
+
+
+  @include sectionMain;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container{
+
+    h2{
+
+      color:$maincolor;
+      text-shadow: 0 2px 0 rgba(0,0,0,0.12);
+    }
+
+    p{
+
+      color: white;
+      text-shadow: 0 2px 0 rgba(0,0,0,0.12);
+    }
+
+    .button{
+
+      background-color: $maincolor;
+
+      &:hover{
+
+        background-color: darken($maincolor,8%);
+      }
+    }
+  }
+}
+
+section.parallax.careers{
+
+  background-image: url("http://192.168.1.250/foodora/img/careers.jpg");
+
+}
+
+section.parallax.press{
+
+  background-image: url("http://192.168.1.250/foodora/img/press.jpg");
+
+}

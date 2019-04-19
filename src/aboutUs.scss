@@ -1,0 +1,26 @@
+section.about-us{
+
+  @include sectionMain;
+
+  .container{
+
+    h2{
+
+      color:$maincolor;
+    }
+
+    p{
+      color: #333;
+    }
+
+    .button{
+
+      background-color: $maincolor;
+
+      &:hover{
+
+        background-color: darken($maincolor,8%);
+      }
+    }
+  }
+}

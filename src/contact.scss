@@ -1,0 +1,28 @@
+section.contact{
+
+  @include sectionMain;
+  background-color: $maincolor;
+
+  .container{
+
+    h2{
+
+      color: white;
+    }
+
+    p{
+      color: #fff;
+    }
+
+    .button{
+
+      background-color: #fff;
+      color: $maincolor;
+
+      &:hover{
+
+        background-color: darken(#fff,8%);
+      }
+    }
+  }
+}
