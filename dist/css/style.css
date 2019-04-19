@@ -76,7 +76,6 @@ section.hero .slider .slide1 {
   -webkit-animation: moveA;
           animation: moveA;
   z-index: 2;
-  background-image: url("http://192.168.1.250/foodora/img/slide1.jpg");
 }
 
 section.hero .slider .slide2 {
@@ -84,7 +83,6 @@ section.hero .slider .slide2 {
           animation: moveB;
   z-index: 2;
   left: -100%;
-  background-image: url("http://192.168.1.250/foodora/img/slide2.jpg");
 }
 
 section.hero .slider .slide1,
@@ -457,14 +455,6 @@ section.parallax .container .button {
 
 section.parallax .container .button:hover {
   background-color: #b10c52;
-}
-
-section.parallax.careers {
-  background-image: url("http://192.168.1.250/foodora/img/careers.jpg");
-}
-
-section.parallax.press {
-  background-image: url("http://192.168.1.250/foodora/img/press.jpg");
 }
 
 section.contact {
