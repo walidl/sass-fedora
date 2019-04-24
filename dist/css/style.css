@@ -27,42 +27,96 @@ nav {
   background-color: #fff;
   width: 100%;
   z-index: 5;
+  height: 66px;
+  transition: height 0.3s ease;
 }
 
 nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 66px;
+  height: 100%;
 }
 
 nav .container img {
   height: 30px;
 }
 
-nav .container ul {
+nav .container .fa-bars {
+  display: none;
+  color: #D70F64;
+}
+
+nav .container .menu ul {
   display: flex;
   align-items: center;
   color: #D70F64;
 }
 
-nav .container ul li {
+nav .container .menu ul li {
   margin-left: 25px;
 }
 
-nav .container ul li a {
+nav .container .menu ul li a {
   font-size: 15px;
   letter-spacing: 1px;
   white-space: nowrap;
 }
 
-nav .container ul li a .fas {
+nav .container .menu ul li a .fas {
   margin-left: 2px;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+}
+
+@media all and (max-width: 760px) {
+  nav {
+    height: 58px;
+  }
+
+  nav .container {
+    justify-content: center;
+  }
+
+  nav .container img {
+    height: 24px;
+  }
+
+  nav .container .fa-bars {
+    display: inline-block;
+    position: absolute;
+    left: 7%;
+  }
+
+  nav .container .menu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    top: 58px;
+    left: 0;
+    background-color: white;
+  }
+
+  nav .container .menu ul {
+    display: block;
+    color: #D70F64;
+  }
+
+  nav .container .menu ul li {
+    margin-bottom: 25px;
+  }
+
+  nav .container .menu ul li a {
+    font-size: 13px;
+  }
 }
 
 section.hero {
   height: 100vh;
   padding-top: 66px;
+  transition: padding-top 0.3s ease;
   position: relative;
 }
 
@@ -337,6 +391,92 @@ section.hero .countries .flags div:hover .name {
   }
 }
 
+@media all and (max-width: 760px) {
+  section.hero {
+    height: auto;
+    padding-top: 58px;
+    position: relative;
+  }
+
+  section.hero .slider {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.hero .slider .slide1 h1,
+  section.hero .slider .slide2 h1 {
+    width: 70%;
+    font-size: 32px;
+  }
+
+  section.hero .countries {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+  }
+
+  section.hero .countries .container {
+    min-width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    display: block;
+  }
+
+  section.hero .countries .container h3 {
+    color: #D70F64;
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+  }
+
+  section.hero .countries .flags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  section.hero .countries .flags div {
+    width: 140px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+    height: 21px;
+    cursor: pointer;
+  }
+
+  section.hero .countries .flags div img {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  section.hero .countries .flags div .name {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    padding-left: 10px;
+    position: relative;
+    bottom: inherit;
+    left: inherit;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    height: 21px;
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 0;
+    background-color: inherit;
+    color: #D70F64;
+  }
+
+  section.hero .countries .flags div .name::after {
+    border: none;
+  }
+}
+
 section.about-us {
   height: 625px;
 }
@@ -370,12 +510,28 @@ section.about-us .container .button {
   justify-content: center;
   align-items: center;
   width: 21%;
+  transition: width 0.3s ease;
   height: 48px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   color: white;
   transition: background-color 0.5s ease;
+}
+
+@media all and (max-width: 760px) {
+  section.about-us .container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 48px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.5s ease;
+  }
 }
 
 section.about-us .container h2 {
@@ -431,12 +587,28 @@ section.parallax .container .button {
   justify-content: center;
   align-items: center;
   width: 21%;
+  transition: width 0.3s ease;
   height: 48px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   color: white;
   transition: background-color 0.5s ease;
+}
+
+@media all and (max-width: 760px) {
+  section.parallax .container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 48px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.5s ease;
+  }
 }
 
 section.parallax .container h2 {
@@ -491,12 +663,28 @@ section.contact .container .button {
   justify-content: center;
   align-items: center;
   width: 21%;
+  transition: width 0.3s ease;
   height: 48px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   color: white;
   transition: background-color 0.5s ease;
+}
+
+@media all and (max-width: 760px) {
+  section.contact .container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 48px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.5s ease;
+  }
 }
 
 section.contact .container h2 {
@@ -543,5 +731,22 @@ footer .container a {
 
 footer .container a:hover {
   color: #D70F64;
+}
+
+@media all and (max-width: 760px) {
+  footer .container {
+    padding: 32px 0;
+  }
+
+  footer .container > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  footer .container .logo {
+    margin-bottom: 10px;
+  }
 }
 

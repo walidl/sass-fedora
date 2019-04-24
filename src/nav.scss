@@ -5,41 +5,117 @@ nav{
   background-color: #fff;
   width: 100%;
   z-index: 5;
+  height: $navfullheight;
+  transition: height 0.3s ease;
+
 
   .container{
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: $navfullheight;
+    height: 100%;
 
     img{
 
       height: $logoheight;
     }
 
-    ul{
+    .fa-bars{
 
-      display: flex;
-      align-items: center;
+      display: none;
       color: $maincolor;
+    }
 
-      li{
 
-        margin-left: 25px;
+    .menu{
 
-        a{
-          font-size: 15px;
+      ul{
 
-          letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        color: $maincolor;
 
-          white-space: nowrap;
+        li{
 
-          .fas{
-            margin-left: 2px;
+          margin-left: 25px;
+
+          a{
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            white-space: nowrap;
+
+            .fas{
+              margin-left: 2px;
+            }
           }
         }
       }
     }
   }
+}
+
+nav.scrolled{
+
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+}
+
+
+@media all  and (max-width: 760px){
+
+  nav{
+
+
+
+    height: $navresponsiveheight;
+
+    .container{
+
+      justify-content: center;
+
+
+
+      img{
+
+        height: $logoRespHeight;
+      }
+
+      .fa-bars{
+
+        display: inline-block;
+        position: absolute;
+        left: 7%;
+      }
+
+      .menu{
+
+        display: none;
+        position: absolute;
+        width: 100vw;
+        top:$navresponsiveheight;
+        left:0;
+
+        background-color: white;
+
+        ul{
+
+          display: block;
+          color: $maincolor;
+
+          li{
+
+            margin-bottom: 25px;
+
+            a{
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
 }

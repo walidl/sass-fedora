@@ -1,9 +1,12 @@
 
 $navfullheight: 66px;
+$navresponsiveheight: 58px;
 $logoheight: 30px;
+$logoRespHeight : $logoheight - 6px;
 $sectionHeight1: 625px;
 
 $maincolor: #D70F64;
+
 
 *{
 
@@ -70,12 +73,33 @@ a, a:hover{
       justify-content: center;
       align-items: center;
       width: 21%;
+      transition: width 0.3s ease;
       height: 48px;
       cursor: pointer;
       font-size: 14px;
       font-weight: 500;
       color: white;
       transition: background-color 0.5s ease;
+    }
+  }
+
+  @media all  and (max-width: 760px){
+
+    .container{
+
+      .button{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        height: 48px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        transition: background-color 0.5s ease;
+      }
     }
   }
 
