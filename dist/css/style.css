@@ -9,8 +9,7 @@ ul {
   list-style: none;
 }
 
-a,
-a:hover {
+a, a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -30,39 +29,32 @@ nav {
   height: 66px;
   transition: height 0.3s ease;
 }
-
 nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
 }
-
 nav .container img {
   height: 30px;
 }
-
 nav .container .fa-bars {
   display: none;
   color: #D70F64;
 }
-
 nav .container .menu ul {
   display: flex;
   align-items: center;
   color: #D70F64;
 }
-
 nav .container .menu ul li {
   margin-left: 25px;
 }
-
 nav .container .menu ul li a {
   font-size: 15px;
   letter-spacing: 1px;
   white-space: nowrap;
 }
-
 nav .container .menu ul li a .fas {
   margin-left: 2px;
 }
@@ -75,21 +67,17 @@ nav.scrolled {
   nav {
     height: 58px;
   }
-
   nav .container {
     justify-content: center;
   }
-
   nav .container img {
     height: 24px;
   }
-
   nav .container .fa-bars {
     display: inline-block;
     position: absolute;
     left: 7%;
   }
-
   nav .container .menu {
     display: none;
     position: absolute;
@@ -98,49 +86,42 @@ nav.scrolled {
     left: 0;
     background-color: white;
   }
-
   nav .container .menu ul {
     display: block;
     color: #D70F64;
   }
-
   nav .container .menu ul li {
     margin-bottom: 25px;
   }
-
   nav .container .menu ul li a {
     font-size: 13px;
   }
 }
-
 section.hero {
   height: 100vh;
   padding-top: 66px;
   transition: padding-top 0.3s ease;
   position: relative;
 }
-
 section.hero .slider {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-
 section.hero .slider .slide1 {
   -webkit-animation: moveA;
           animation: moveA;
   z-index: 2;
+  background-image: url("../../img/slide1.jpg");
 }
-
 section.hero .slider .slide2 {
   -webkit-animation: moveB;
           animation: moveB;
   z-index: 2;
   left: -100%;
+  background-image: url("../../img/slide2.jpg");
 }
-
-section.hero .slider .slide1,
-section.hero .slider .slide2 {
+section.hero .slider .slide1, section.hero .slider .slide2 {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -155,9 +136,7 @@ section.hero .slider .slide2 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
-
-section.hero .slider .slide1 h1,
-section.hero .slider .slide2 h1 {
+section.hero .slider .slide1 h1, section.hero .slider .slide2 h1 {
   width: 60%;
   font-size: 42px;
   color: white;
@@ -170,7 +149,6 @@ section.hero .slider .slide2 h1 {
           transform: translate(-50%, -50%);
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
 }
-
 section.hero .countries {
   position: absolute;
   bottom: 0;
@@ -178,25 +156,21 @@ section.hero .countries {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 3;
 }
-
 section.hero .countries .container {
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
 }
-
 section.hero .countries .container h3 {
   color: white;
   font-size: 12px;
   margin-right: 40px;
   white-space: nowrap;
 }
-
 section.hero .countries .flags {
   display: flex;
   flex-wrap: wrap;
 }
-
 section.hero .countries .flags div {
   margin-right: 15px;
   margin-bottom: 15px;
@@ -204,12 +178,10 @@ section.hero .countries .flags div {
   height: 30px;
   cursor: pointer;
 }
-
 section.hero .countries .flags div img {
   height: 30px;
   border-radius: 3px;
 }
-
 section.hero .countries .flags div .name {
   display: none;
   justify-content: center;
@@ -227,7 +199,6 @@ section.hero .countries .flags div .name {
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.9);
 }
-
 section.hero .countries .flags div .name::after {
   content: "";
   position: absolute;
@@ -238,7 +209,6 @@ section.hero .countries .flags div .name::after {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
 }
-
 section.hero .countries .flags div:hover .name {
   display: flex;
 }
@@ -247,32 +217,25 @@ section.hero .countries .flags div:hover .name {
   0% {
     left: 0;
   }
-
   45% {
     left: 0;
   }
-
   50% {
     left: -100%;
   }
-
   60% {
     z-index: 0;
     left: -100%;
   }
-
   70% {
     left: 100%;
   }
-
   80% {
     z-index: 2;
   }
-
   95% {
     left: 100%;
   }
-
   100% {
     left: 0;
   }
@@ -282,148 +245,116 @@ section.hero .countries .flags div:hover .name {
   0% {
     left: 0;
   }
-
   45% {
     left: 0;
   }
-
   50% {
     left: -100%;
   }
-
   60% {
     z-index: 0;
     left: -100%;
   }
-
   70% {
     left: 100%;
   }
-
   80% {
     z-index: 2;
   }
-
   95% {
     left: 100%;
   }
-
   100% {
     left: 0;
   }
 }
-
 @-webkit-keyframes moveB {
   0% {
     left: -100%;
   }
-
   10% {
     z-index: 0;
     left: -100%;
   }
-
   20% {
     left: 100%;
   }
-
   30% {
     z-index: 2;
   }
-
   20% {
     left: 100%;
   }
-
   45% {
     left: 100%;
   }
-
   50% {
     left: 0;
   }
-
   95% {
     left: 0;
   }
-
   100% {
     left: -100%;
   }
 }
-
 @keyframes moveB {
   0% {
     left: -100%;
   }
-
   10% {
     z-index: 0;
     left: -100%;
   }
-
   20% {
     left: 100%;
   }
-
   30% {
     z-index: 2;
   }
-
   20% {
     left: 100%;
   }
-
   45% {
     left: 100%;
   }
-
   50% {
     left: 0;
   }
-
   95% {
     left: 0;
   }
-
   100% {
     left: -100%;
   }
 }
-
 @media all and (max-width: 760px) {
   section.hero {
     height: auto;
     padding-top: 58px;
     position: relative;
   }
-
   section.hero .slider {
     height: 340px;
     position: relative;
     overflow: hidden;
   }
-
-  section.hero .slider .slide1 h1,
-  section.hero .slider .slide2 h1 {
+  section.hero .slider .slide1 h1, section.hero .slider .slide2 h1 {
     width: 70%;
     font-size: 32px;
   }
-
   section.hero .countries {
     position: relative;
     width: 100%;
     background-color: white;
     z-index: 3;
   }
-
   section.hero .countries .container {
     min-width: 300px;
     height: 100%;
     padding: 20px 0;
     display: block;
   }
-
   section.hero .countries .container h3 {
     color: #D70F64;
     font-size: 24px;
@@ -432,13 +363,11 @@ section.hero .countries .flags div:hover .name {
     margin-bottom: 20px;
     white-space: nowrap;
   }
-
   section.hero .countries .flags {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-
   section.hero .countries .flags div {
     width: 140px;
     margin-right: 0;
@@ -448,12 +377,10 @@ section.hero .countries .flags div:hover .name {
     height: 21px;
     cursor: pointer;
   }
-
   section.hero .countries .flags div img {
     height: 100%;
     border-radius: 3px;
   }
-
   section.hero .countries .flags div .name {
     display: flex;
     justify-content: flex-start;
@@ -471,40 +398,33 @@ section.hero .countries .flags div:hover .name {
     background-color: inherit;
     color: #D70F64;
   }
-
   section.hero .countries .flags div .name::after {
     border: none;
   }
 }
-
 section.about-us {
   height: 625px;
 }
-
 section.about-us .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 section.about-us .container > * {
   margin-bottom: 25px;
 }
-
 section.about-us .container h2 {
   text-align: center;
   font-weight: 500;
   font-size: 30px;
 }
-
 section.about-us .container p {
   width: 65%;
   text-align: center;
   font-size: 18px;
   line-height: 2rem;
 }
-
 section.about-us .container .button {
   display: flex;
   justify-content: center;
@@ -518,7 +438,6 @@ section.about-us .container .button {
   color: white;
   transition: background-color 0.5s ease;
 }
-
 @media all and (max-width: 760px) {
   section.about-us .container .button {
     display: flex;
@@ -533,19 +452,15 @@ section.about-us .container .button {
     transition: background-color 0.5s ease;
   }
 }
-
 section.about-us .container h2 {
   color: #D70F64;
 }
-
 section.about-us .container p {
   color: #333;
 }
-
 section.about-us .container .button {
   background-color: #D70F64;
 }
-
 section.about-us .container .button:hover {
   background-color: #b10c52;
 }
@@ -557,31 +472,26 @@ section.parallax {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 section.parallax .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 section.parallax .container > * {
   margin-bottom: 25px;
 }
-
 section.parallax .container h2 {
   text-align: center;
   font-weight: 500;
   font-size: 30px;
 }
-
 section.parallax .container p {
   width: 65%;
   text-align: center;
   font-size: 18px;
   line-height: 2rem;
 }
-
 section.parallax .container .button {
   display: flex;
   justify-content: center;
@@ -595,7 +505,6 @@ section.parallax .container .button {
   color: white;
   transition: background-color 0.5s ease;
 }
-
 @media all and (max-width: 760px) {
   section.parallax .container .button {
     display: flex;
@@ -610,54 +519,53 @@ section.parallax .container .button {
     transition: background-color 0.5s ease;
   }
 }
-
 section.parallax .container h2 {
   color: #D70F64;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
 }
-
 section.parallax .container p {
   color: white;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
 }
-
 section.parallax .container .button {
   background-color: #D70F64;
 }
-
 section.parallax .container .button:hover {
   background-color: #b10c52;
+}
+
+section.parallax.careers {
+  background-image: url("../../img/careers.jpg");
+}
+
+section.parallax.press {
+  background-image: url("../../img/press.jpg");
 }
 
 section.contact {
   height: 625px;
   background-color: #D70F64;
 }
-
 section.contact .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 section.contact .container > * {
   margin-bottom: 25px;
 }
-
 section.contact .container h2 {
   text-align: center;
   font-weight: 500;
   font-size: 30px;
 }
-
 section.contact .container p {
   width: 65%;
   text-align: center;
   font-size: 18px;
   line-height: 2rem;
 }
-
 section.contact .container .button {
   display: flex;
   justify-content: center;
@@ -671,7 +579,6 @@ section.contact .container .button {
   color: white;
   transition: background-color 0.5s ease;
 }
-
 @media all and (max-width: 760px) {
   section.contact .container .button {
     display: flex;
@@ -686,20 +593,16 @@ section.contact .container .button {
     transition: background-color 0.5s ease;
   }
 }
-
 section.contact .container h2 {
   color: white;
 }
-
 section.contact .container p {
   color: #fff;
 }
-
 section.contact .container .button {
   background-color: #fff;
   color: #D70F64;
 }
-
 section.contact .container .button:hover {
   background-color: #ebebeb;
 }
@@ -707,28 +610,23 @@ section.contact .container .button:hover {
 footer .container {
   padding: 32px 0;
 }
-
 footer .container > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5px 0;
 }
-
 footer .container .logo {
   height: 30px;
 }
-
 footer .container .social img {
   height: 30px;
 }
-
 footer .container a {
   font-size: 14px;
   transition: color 0.3s ease;
   margin-left: 8px;
 }
-
 footer .container a:hover {
   color: #D70F64;
 }
@@ -737,16 +635,13 @@ footer .container a:hover {
   footer .container {
     padding: 32px 0;
   }
-
   footer .container > div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 5px 0;
   }
-
   footer .container .logo {
     margin-bottom: 10px;
   }
 }
-
